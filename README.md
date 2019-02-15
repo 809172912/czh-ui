@@ -22,6 +22,37 @@ npm install -g @vue/cli
 注意：scripts命令中czhui是自定义的打包后的文件名，./src/components/index.js是打包入口
 ```
 
+## 入口文件配置
+```
+import TopBar from './TopBar.vue'
+import CButton from './CButton.vue'
+
+const Components = {
+  TopBar,
+  CButton
+}
+
+const install = function (Vue) {
+  Object.keys(Components).forEach(name => {
+    Vue.component(name, Components[name])
+  })
+}
+
+// auto install
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
+
+export {
+  TopBar,
+  CButton
+}
+
+export default {
+  install
+}
+```
+
 ## 打包项目
 ```
 npm run build-bundle
