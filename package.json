@@ -1,6 +1,6 @@
 {
   "name": "czh-ui",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "private": false,
   "main": "./dist/czhui.common.js",
   "files": [
