@@ -24,6 +24,7 @@ npm install -g @vue/cli
 
 ## 入口文件配置
 ```
+// 引入组件
 import TopBar from './TopBar.vue'
 import CButton from './CButton.vue'
 
@@ -32,22 +33,25 @@ const Components = {
   CButton
 }
 
+// 安装组件
 const install = function (Vue) {
   Object.keys(Components).forEach(name => {
     Vue.component(name, Components[name])
   })
 }
 
-// auto install
+// <script>标签使用vue时自动完全加载
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
+// 按需加载
 export {
   TopBar,
   CButton
 }
 
+// 默认完全加载
 export default {
   install
 }
