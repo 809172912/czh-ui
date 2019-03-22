@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <DatePicker></DatePicker>
+    <DatePicker> </DatePicker>
   </div>
 </template>
 
