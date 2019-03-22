@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <span>
-      你好，这是czhUI的button组件
+      你好，这是czhUI的button组 件
     </span>
   </div>
 </template>
